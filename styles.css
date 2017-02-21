@@ -1,0 +1,321 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ===================== MAIN STYLES ============================================
+===============================================================================*/
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #40C4FF;
+  font-family: 'Roboto', sans-serif;
+  color: #E1F5FE;
+}
+/*header---------------------------*/
+header {
+ background: #00B0FF;
+ position: relative;
+ padding: .5em;
+}
+
+ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul li {
+  list-style: none;
+}
+ul li a {
+  text-decoration: none;
+  font-family: 'Indie Flower', cursive;
+  color: #fff;
+  font-size: 1em;
+  padding: 0 3.5em;
+}
+
+@media(min-width: 769px) {
+  ul li a {
+    padding: 0 10em;
+  }
+}
+
+@media(min-width: 1100px) {
+  ul li a {
+    padding: 0 15em;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  color: #fff;
+  background: #2979FF;
+  padding: 1em 1.5em;
+  border: 3px solid  #2962FF;
+  font-family: 'Indie Flower', cursive;
+
+}
+/* info---------------*/
+.info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3.5em;
+  padding-left: .5em;
+  padding-right: .5em;
+  justify-content:  flex-start;
+}
+
+
+.info h2 {
+  text-align: center;
+  padding: 0;
+  font-size: 2em;
+  margin-bottom: .3em;
+  font-family: 'Indie Flower', cursive;
+}
+
+.info p {
+  margin: 1em 0;
+}
+
+ .button {
+    margin: 1em .5em;
+    color: #fff;
+    text-align: center;
+    padding: .625em 1.8em;
+    background: #2979FF;
+    border-bottom: 4px solid #2962FF;
+    border-radius: .35em;
+    align-self: flex-end;
+    text-decoration: none;
+    font-family: 'Indie Flower', cursive;
+    transition: background .5s ease-out;
+}
+
+.button:hover {
+  background:  #2962FF;
+}
+
+/* phone */
+
+.phone {
+  display: flex;
+}
+
+.phone img {
+  max-width: 100%;
+  margin: 0 auto;
+  align-self: center;
+}
+
+@keyframes slide {
+  from {
+    transform: translateY(242px);
+  }
+  to {
+    transform: translateY(140px);
+  }
+}
+
+.under {
+  background: #00B0FF;
+  text-align: center;
+  padding: 2em 0;
+}
+
+.under h1 {
+  font-size: 3em;
+  padding: 1em 0;
+  font-family: 'Indie Flower', cursive;
+}
+
+
+.join {
+  margin: 1em 0;
+}
+
+.join h3 {
+  font-size: 2em;
+}
+
+.join img {
+  height: 3.5em;
+  width: auto;
+}
+
+.join img,
+.join p,
+.join h3   {
+  margin: .3em;
+}
+
+footer {
+  background:  #2962FF;
+}
+
+footer p {
+  font-size: .5em;
+}
+@media(min-width: 800px) {
+  .about-wrapper {
+    display: flex;
+  }
+
+  .d {
+    flex: 1 1 50%;
+  }
+
+  .phone img {
+    transform: translateY(242px);
+    position: relative;
+    z-index: -1;
+    animation: 2s slide forwards ease-out;
+  }
+
+  .join-items {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 0;
+  }
+
+}
+
+@media(min-width: 1100px) {
+
+  .info {
+    padding-top: 3.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .info h2 {
+    font-size: 4em;
+    font-weight: 400;
+  }
+
+  .info p {
+    font-size: 1.2em;
+  }
+
+  .under {
+    margin-top: -10em;
+  }
+
+}
+
+
+/* floating clouds */
+
+.wrapper {
+  position: relative;
+}
+
+.cloud1  {
+  height: 10em;
+  width: auto;
+  position: absolute;
+  top: 2%;
+  right: 0;
+  fill: #fafafa;
+  animation: 8s left alternate infinite linear;
+}
+
+.cloud2 {
+  fill: #fafafa;
+  height: 10em;
+  width: auto;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  animation: 8s right alternate infinite linear;
+}
+
+
+@keyframes left{
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100px);
+    }
+}
+
+@keyframes right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+@media(min-width:800px) {
+    .cloud1 {
+      top: 5%;
+      height: 15em;
+      width: auto;
+    }
+
+    .cloud2 {
+      top:35%;
+      height: 20em;
+      width: auto;
+    }
+}
+
